@@ -1,0 +1,56 @@
+﻿Hi,
+
+Please note - I have tried out (for the first time) using a Minimal Api (as opposed to a MVC pattern etc) and used Swagger to help debug and run.
+As such i have not baked in any authentication or validation etc..
+
+I have also not taken the time to do many things.  Ie. refactor much, TDD etc.  
+
+I did take longer than 4 hours.
+
+Lastly, task 2's : https://currencylayer.com needs a paid subsrcription to retrieve the currency conversion.  I toyed with converting from JSON to objects and using the live data to 
+work out the rate, but time did not permit.
+
+My recomended way to inspect this is to run it and use https://localhost:5001/swagger/index.html
+
+Thanks for offering me this challenge.
+
+Regards
+David
+
+
+
+
+---- Challenge Task Description
+
+The challenge is to design and build a running API with the following requirements. 
+Upon finishing, please directly send us the source code or upload to a public GitHub repository and send us the URL.
+You should spend no more than 4 hours on the exercise. Please submit your response within a week.
+
+Task 1:
+The API should respond to a resource request to /MyBankAccounts with the following details:
+[
+   {
+      "AccountId":1,
+      "AccountName":"Account 1",
+      "Balance":100.00
+   },
+   {
+      "AccountId":2,
+      "AccountName":"Account 2",
+      "Balance":200.00
+   }
+]
+
+
+Task 2:
+The API should respond to a resource request to /CurrencyConversionRate, which accepts a source currency as input, by returning the conversion rate to AUD.
+
+http://apilayer.net/api/live?access_key=69b0dbad7d9244c001a337943c32dc8d&currencies=EUR,GBP,CAD,PLN&source=USD&format=1
+
+Hint: You can use any free currency conversion API available. For example: https://currencylayer.com
+
+
+Task 3:
+The API should respond to a resource request to /BankAccountsSummary, which accepts “from” and “to” dates as inputs, 
+by calling the bank transactions endpoint (https://s3.ap-southeast-2.amazonaws.com/myprosperity.com.au/Test/Transactions.json) 
+and filtering them using the input date range. Then it should calculate the total net transactions per account and return them sorted by the account name.

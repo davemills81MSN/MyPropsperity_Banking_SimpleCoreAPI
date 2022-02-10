@@ -1,0 +1,21 @@
+﻿{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:59475",
+      "sslPort": 44389
+    }
+  },
+  "profiles": {
+    "Banking_SimpleCoreApi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "args": "${auto-detect-url}/swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    }
+  }
+}
